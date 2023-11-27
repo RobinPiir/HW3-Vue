@@ -10,7 +10,21 @@
       </div>
       <div class="input-group">
         <label for="password">Password:</label>
-        <input type="password" name="password" id="password" placeholder="Password" required>
+        <input
+          type="password"
+          name="password"
+          id="password"
+          placeholder="Password"
+          pattern="^(?=.*[A-Z])(?=.*[a-z].*[a-z])(?=.*\d)(?=.*_).{8,15}$"
+          title="Password must meet the following criteria:
+            - At least 8 characters and less than 15 characters.
+            - At least one uppercase alphabet character.
+            - At least two lowercase alphabet characters.
+            - At least one numeric value.
+            - Start with an uppercase alphabet.
+            - Include the character '_'."
+          required
+        >
       </div>
       <button type="submit">Sign Up</button>
     </form>
