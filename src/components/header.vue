@@ -1,8 +1,8 @@
 <template>
-    <nav>
+    <nav class="nav">
         <h1>Header</h1>
       <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
+      <router-link to="/about">Sign up</router-link>
     </nav>
     <router-view/>
   </template>
@@ -13,3 +13,20 @@ export default {
     name: 'WebHeader',
 }
 </script>
+
+<style>
+.nav{
+    bottom: 0;
+    right: 0;
+    left: 0;
+    top: 50px;
+    padding-top: .5em;
+    padding-bottom: .5em;
+    border: 1px solid #646174;
+    background-color: #BED6B8;
+    text-align: center;
+    border-radius: 5px;
+    flex-direction: row;
+    justify-content: space-between;
+}
+</style>
