@@ -10,9 +10,10 @@
                 <img class="box-image" v-if="post.image != null" :src="getImgUrl(post.image)" alt="pic">
                 <p class="comment">{{ post.body }}</p>
                 <footer class=box-footer>
-                <img src="../assets/like.png" alt="like-button" width="50" height="50" class=like-button>
+                <button class="like-button" @click="likePost(post)"><img src="../assets/like.png" alt="like-button" width="50" height="50" class="like-image">{{ post.likes }}</button>
                 </footer>
             </div>
+            <button class="reset-button" @click="resetAllLikes"><h3>Reset all likes</h3></button>
         </div>
     </body>
 </template>
@@ -27,13 +28,22 @@ return {
 computed: {
     postList(){
         return this.$store.state.postList
-    }
-},
+    }},
 methods: {
     getImgUrl(pic) {
     return require('../assets/'+pic)
-}
-}
+    },
+    likePost(post) {
+      // Increment the likes for the clicked post
+      post.likes++;
+    },
+    resetAllLikes() {
+      // Reset all likes to their original values
+      this.postList.forEach(post => {
+        // Assuming you have an originalLikes property in each post
+        post.likes = 0
+      });
+    }}
 }
 </script>
 
@@ -136,10 +146,28 @@ body{
 }
 
 .like-button{
+    border:0px;
+    background-color: white;
     margin-left: 30px;
     margin-bottom: 10px;
-    width: 2em;
+    padding:5px;
+    align-items: left;
+}
+
+
+.like-image{
+    width:2em;
     height:auto;
+    opacity:100%;
+}
+
+.like-button:hover > .like-image{
+    opacity: 70%;
+}
+
+.reset-button{
+    margin: 20px;
+    padding: 10px;
 }
 
 header time{

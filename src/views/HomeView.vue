@@ -1,6 +1,7 @@
 <template>
   <div class="home">
     <HeaderCompo/>
+
     <PostsCompo/>
     <FooterCompo/>
   </div>

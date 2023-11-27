@@ -8,7 +8,8 @@ export default createStore({
       "authorName": "Roland-Carlis Vares",
       "authorAvatar": "Vares.png",
       "body":"Willow",
-      "image":"pic3.png"
+      "image":"pic3.png",
+      "likes": 152
   },
   {
       "id": 2,
@@ -16,7 +17,8 @@ export default createStore({
       "authorName": "Robin Piir",
       "authorAvatar": "Piir.png",
       "body":"My head hurts",
-      "image":null
+      "image":null,
+      "likes": 1
   },
   {
       "id": 3,
@@ -24,7 +26,8 @@ export default createStore({
       "authorName": "Roland-Carlis Vares",
       "authorAvatar": "Vares.png",
       "body":"Munch",
-      "image":"Munch.png"
+      "image":"Munch.png",
+      "likes": 3862
   },
   {
       "id": 4,
@@ -32,7 +35,8 @@ export default createStore({
       "authorName": "Karolin Kerro",
       "authorAvatar": "Kerro.png",
       "body":"Off to school!",
-      "image":null
+      "image":null,
+      "likes": 15646
   },
   {
       "id": 5,
@@ -40,7 +44,8 @@ export default createStore({
       "authorName": "Robin Piir",
       "authorAvatar": "Piir.png",
       "body":"Anyone know any good coffee places?",
-      "image":null
+      "image":null,
+      "likes": 0
   },
   {
       "id": 6,
@@ -48,7 +53,8 @@ export default createStore({
       "authorName": "Robin Piir",
       "authorAvatar": "Piir.png",
       "body":"Caesar",
-      "image":"pic1.png"
+      "image":"pic1.png",
+      "likes": 17
   },
   {
       "id": 7,
@@ -56,7 +62,8 @@ export default createStore({
       "authorName": "Roland-Carlis Vares",
       "authorAvatar": "Vares.png",
       "body":"Kebab",
-      "image":null
+      "image":null,
+      "likes": 6
   },
   {
       "id": 8,
@@ -64,7 +71,8 @@ export default createStore({
       "authorName": "Robin Piir",
       "authorAvatar": "Piir.png",
       "body":"Luci",
-      "image":"pic2.png"
+      "image":"pic2.png",
+      "likes": 17
   },
   {
       "id": 9,
@@ -72,7 +80,8 @@ export default createStore({
       "authorName": "Roland-Carlis Vares",
       "authorAvatar": "Vares.png",
       "body":"Off to my first class of the semester",
-      "image":null
+      "image":null,
+      "likes": 6
   },
   {
       "id": 10,
@@ -80,7 +89,8 @@ export default createStore({
       "authorName": "Karolin Kerro",
       "authorAvatar": "Kerro.png",
       "body":"Painting in nature",
-      "image":"Picnic.png"
+      "image":"Picnic.png",
+      "likes": 636
   },
   {
       "id": 11,
@@ -88,7 +98,8 @@ export default createStore({
       "authorName": "Robin Piir",
       "authorAvatar": "Piir.png",
       "body":"Fortnite players are noobs lmao",
-      "image":null
+      "image":null,
+      "likes": 15982
   }]
   },
   getters: {
