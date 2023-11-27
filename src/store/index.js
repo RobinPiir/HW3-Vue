@@ -80,7 +80,7 @@ export default createStore({
       "authorName": "Karolin Kerro",
       "authorAvatar": "Kerro.png",
       "body":"Painting in nature",
-      "image":"picnic.png"
+      "image":"Picnic.png"
   },
   {
       "id": 11,

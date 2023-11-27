@@ -1,7 +1,6 @@
 <template>
   <div class="home">
     <HeaderCompo/>
-    <img alt="Vue logo" src="../assets/logo.png">
     <PostsCompo/>
     <FooterCompo/>
   </div>

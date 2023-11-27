@@ -1,13 +1,20 @@
 <template>
-    <div class="contentfield">
-        <div class="container" v-for = "post in postList" :key="post.id">
-            <header class="box-header">
-                <img :src="getImgUrl(post.authorAvatar)" alt="pic" width="50" height="50">
-                <p class="post-author">{{ post.authorName }}</p>
-                <time class="post-date">{{ post.createTime }}</time>
-            </header>
+    <body>
+        <div class="contentfield">
+            <div class="container" v-for = "post in postList" :key="post.id">
+                <header class="box-header">
+                    <img class="profile" :src="getImgUrl(post.authorAvatar)" alt="pic" width="50" height="50">
+                    <p class="post-author">{{ post.authorName }}</p>
+                    <time class="post-date">{{ post.createTime }}</time>
+                </header>
+                <img class="box-image" v-if="post.image != null" :src="getImgUrl(post.image)" alt="pic">
+                <p class="comment">{{ post.body }}</p>
+                <footer class=box-footer>
+                <img src="../assets/like.png" alt="like-button" width="50" height="50" class=like-button>
+                </footer>
+            </div>
         </div>
-    </div>
+    </body>
 </template>
 
 <script>
@@ -31,10 +38,45 @@ methods: {
 </script>
 
 <style scoped>
-.contentfield{
+
+* {
+    font-family: sans-serif;
+    box-sizing: border-box;
+}
+
+@media (min-width: 600px) {
+    .header,
+    .nav {
+        display: flex;
+    }
+
+    .header {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .contentfield{
+        width:60%;
+    }
+
+    .container{
+        width:inherit;
+    }
+
+}
+@media (min-width: 1000px) {
+    .contentfield{
         display:flex;
         width:60%;
         height: auto;
+    }
+}
+
+body{
+    background-color: #DDFACD;
+ }
+
+.contentfield{
         background-color: #B1CDA4;
         border: 1px solid black;
         height: auto;
@@ -55,6 +97,7 @@ methods: {
     border:1px solid gray;
     box-shadow: 5px 5px 20px #888888;
     border-radius: 5px;
+    text-align: left;
 }
 
 .profile{
@@ -75,4 +118,34 @@ methods: {
     margin-top: 20px;
     float: right;
 }
+
+.box-image{
+    border: 1px solid gray;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width:auto;
+    max-height: 20em;
+    max-width: 100%;
+ }
+
+.comment{
+    margin-top: 20px;
+    margin-left: 40px;
+    vertical-align: top;
+}
+
+.like-button{
+    margin-left: 30px;
+    margin-bottom: 10px;
+    width: 2em;
+    height:auto;
+}
+
+header time{
+    margin-right: 35px;
+    text-align: right;
+    display: block;
+}
+
 </style>
