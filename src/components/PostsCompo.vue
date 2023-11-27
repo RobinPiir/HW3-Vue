@@ -2,9 +2,9 @@
     <div class="contentfield">
         <div class="container" v-for = "post in postList" :key="post.id">
             <header class="box-header">
-                <img class="profile" src="post.authorAvatar" width="50" height="50" alt="Post author">
-                <p class="post-author">{{ post.author }}</p>
-                <time class="post-date">{{ post.createTime }}</time>'
+                <img :src="getImgUrl(post.authorAvatar)" alt="pic" width="50" height="50">
+                <p class="post-author">{{ post.authorName }}</p>
+                <time class="post-date">{{ post.createTime }}</time>
             </header>
         </div>
     </div>
@@ -13,12 +13,19 @@
 <script>
 export default {
     name: "PostsCompo",
-    props: ["postList"],
     data: function() {
 return {
 
 }},
 computed: {
+    postList(){
+        return this.$store.state.postList
+    }
+},
+methods: {
+    getImgUrl(pic) {
+    return require('../assets/'+pic)
+}
 }
 }
 </script>
