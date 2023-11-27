@@ -9,8 +9,7 @@
 
 <script>
 export default {
-    name: 'WebFooter',
-
+    name: 'FooterCompo',
 }
 </script>
 

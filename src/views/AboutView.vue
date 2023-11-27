@@ -1,21 +1,21 @@
 <template>
   <div class="about">
-    <WebHeader/>
+    <HeaderCompo/>
     <h1>This is an about page</h1>
-    <WebFooter/>
+    <FooterCompo/>
   </div>
 </template>
 
 <script>
 // @ is an alias to /src
-import WebFooter from '@/components/footer.vue'
-import WebHeader from '@/components/header.vue'
+import FooterCompo from '@/components/FooterCompo.vue'
+import HeaderCompo from '@/components/HeaderCompo.vue'
 
 export default {
   name: 'AboutView',
   components: {
-    WebFooter,
-    WebHeader
+    FooterCompo,
+    HeaderCompo
   }
 }
 </script>

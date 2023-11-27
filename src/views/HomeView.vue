@@ -1,23 +1,23 @@
 <template>
   <div class="home">
-    <WebHeader/>
+    <HeaderCompo/>
     <img alt="Vue logo" src="../assets/logo.png">
     <PostsCompo/>
-    <WebFooter/>
+    <FooterCompo/>
   </div>
 </template>
 
 <script>
 // @ is an alias to /src
-import WebFooter from '@/components/footer.vue'
-import WebHeader from '@/components/header.vue'
+import FooterCompo from '@/components/FooterCompo.vue'
+import HeaderCompo from '@/components/HeaderCompo.vue'
 import PostsCompo from '@/components/PostsCompo.vue'
 
 export default {
   name: 'HomeView',
   components: {
-    WebFooter,
-    WebHeader,
+    FooterCompo,
+    HeaderCompo,
     PostsCompo
   }
 }
