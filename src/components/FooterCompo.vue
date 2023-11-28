@@ -3,7 +3,6 @@
         <p>
             Authors: Robin Piir, Karolin Kerro, Roland-Carlis Vares
         </p>
-        <h1>Footer</h1>
     </footer>
 </template>
 
